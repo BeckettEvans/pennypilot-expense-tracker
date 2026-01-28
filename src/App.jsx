@@ -19,8 +19,15 @@ import {
 } from 'firebase/firestore';
 
 // --- Firebase Configuration ---
-const firebaseConfig = JSON.parse(__firebase_config);
-const app = initializeApp(firebaseConfig);
+// Firebase config - using mock config for Vercel deployment
+const firebaseConfig = {
+  apiKey: "AIzaSyDummyKey",
+  authDomain: "dummy-domain.firebaseapp.com",
+  projectId: "dummy-project",
+  storageBucket: "dummy-bucket.appspot.com",
+  messagingSenderId: "0",
+  appId: "0"
+}; // Original: JSON.parse(_firebase_config)const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
