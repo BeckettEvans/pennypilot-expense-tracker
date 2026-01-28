@@ -1,5 +1,4 @@
-src/App.jsximport { useState, useEffect, useRef } from 'react';
-
+import { useState, useEffect, useRef } from 'react';
 // Simple HTML-based implementation that doesn't require Firebase
 const App = () => {
   return (
